@@ -1,0 +1,15 @@
+{
+  "name": "WhatsLink",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Your description",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["script.js"]
+  },
+  "icons": {
+    "16": "whatsapp-16.png",
+    "48": "whatsapp-48.png",
+    "128": "whatsapp-128.png"
+  }
+}
