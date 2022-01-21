@@ -1,9 +1,14 @@
 function getword(info, tab) {
-  console.log("Word " + info.selectionText + " was clicked.");
+  const { selectionText } = info;
+
+  let formattedValue = selectionText.replace(/\D/g, "");
+
+  if (!selectionText.startsWith("55")) {
+    formattedValue = `55${formattedValue}`;
+  }
+
   chrome.tabs.create({
-    url:
-      "https://api.whatsapp.com/send?phone=" +
-      info.selectionText.replace(/\D/g, "").trim(),
+    url: "https://api.whatsapp.com/send?phone=" + formattedValue,
   });
 }
 chrome.contextMenus.create({
